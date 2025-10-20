@@ -1,0 +1,165 @@
+# Services for Free Sleep integration
+
+set_schedule:
+  name: Set schedule
+  description: Update temperature/alarm schedule for a specific day and side
+  fields:
+    side:
+      name: Side
+      description: Which side of the bed (left or right)
+      required: true
+      selector:
+        select:
+          options:
+            - left
+            - right
+    day:
+      name: Day
+      description: Day of the week
+      required: true
+      selector:
+        select:
+          options:
+            - monday
+            - tuesday
+            - wednesday
+            - thursday
+            - friday
+            - saturday
+            - sunday
+    schedule:
+      name: Schedule
+      description: Schedule configuration object
+      required: true
+
+set_alarm:
+  name: Set alarm
+  description: Configure alarm for specific side and day
+  fields:
+    side:
+      name: Side
+      description: Which side of the bed (left or right)
+      required: true
+      selector:
+        select:
+          options:
+            - left
+            - right
+    day:
+      name: Day
+      description: Day of the week
+      required: true
+      selector:
+        select:
+          options:
+            - monday
+            - tuesday
+            - wednesday
+            - thursday
+            - friday
+            - saturday
+            - sunday
+    alarm:
+      name: Alarm
+      description: Alarm configuration object
+      required: true
+
+set_base_position:
+  name: Set base position
+  description: Set adjustable base head and feet angles
+  fields:
+    head:
+      name: Head angle
+      description: Head angle in degrees (0-60)
+      required: true
+      selector:
+        number:
+          min: 0
+          max: 60
+          step: 1
+          mode: slider
+          unit_of_measurement: "°"
+    feet:
+      name: Feet angle
+      description: Feet angle in degrees (0-45)
+      required: true
+      selector:
+        number:
+          min: 0
+          max: 45
+          step: 1
+          mode: slider
+          unit_of_measurement: "°"
+    feed_rate:
+      name: Feed rate
+      description: Movement speed (30-100)
+      required: false
+      default: 50
+      selector:
+        number:
+          min: 30
+          max: 100
+          step: 5
+          mode: slider
+
+set_base_preset:
+  name: Set base preset
+  description: Set base to a predefined position
+  fields:
+    preset:
+      name: Preset
+      description: Preset position name
+      required: true
+      selector:
+        select:
+          options:
+            - flat
+            - sleep
+            - relax
+            - zero_gravity
+            - anti_snore
+
+enable_away_mode:
+  name: Enable away mode
+  description: Enable away mode for a side
+  fields:
+    side:
+      name: Side
+      description: Which side of the bed (left or right)
+      required: true
+      selector:
+        select:
+          options:
+            - left
+            - right
+    away_start:
+      name: Away start
+      description: Optional start date/time
+      required: false
+      selector:
+        datetime:
+    away_return:
+      name: Away return
+      description: Optional return date/time
+      required: false
+      selector:
+        datetime:
+
+disable_away_mode:
+  name: Disable away mode
+  description: Disable away mode for a side
+  fields:
+    side:
+      name: Side
+      description: Which side of the bed (left or right)
+      required: true
+      selector:
+        select:
+          options:
+            - left
+            - right
+
+prime_pod:
+  name: Prime pod
+  description: Manually start pod priming process
+

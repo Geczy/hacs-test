@@ -1,0 +1,79 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Free Sleep Pod",
+        "description": "Enter the IP address or hostname of your Free Sleep Pod.",
+        "data": {
+          "host": "Host (IP address or URL)"
+        }
+      },
+      "reconfigure": {
+        "title": "Reconfigure Free Sleep Pod",
+        "description": "Update the connection details for your Free Sleep Pod.",
+        "data": {
+          "host": "Host (IP address or URL)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to the pod. Please check the IP address and ensure the pod is accessible on your network.",
+      "unknown": "Unexpected error occurred"
+    },
+    "abort": {
+      "already_configured": "This Free Sleep Pod is already configured"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "water_level": {
+        "name": "Water level"
+      },
+      "room_temperature": {
+        "name": "Room temperature"
+      },
+      "room_humidity": {
+        "name": "Room humidity"
+      },
+      "led_brightness": {
+        "name": "LED brightness"
+      },
+      "current_temperature": {
+        "name": "Current temperature"
+      },
+      "time_remaining": {
+        "name": "Time remaining"
+      },
+      "heart_rate": {
+        "name": "Heart rate"
+      },
+      "hrv": {
+        "name": "HRV"
+      },
+      "breathing_rate": {
+        "name": "Breathing rate"
+      }
+    },
+    "binary_sensor": {
+      "water_level_ok": {
+        "name": "Water level OK"
+      },
+      "is_priming": {
+        "name": "Priming"
+      },
+      "prime_notification": {
+        "name": "Prime notification"
+      },
+      "base_moving": {
+        "name": "Base moving"
+      },
+      "pod_on": {
+        "name": "Pod on"
+      },
+      "alarm_vibrating": {
+        "name": "Alarm vibrating"
+      }
+    }
+  }
+}
+

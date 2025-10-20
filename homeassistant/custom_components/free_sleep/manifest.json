@@ -1,0 +1,12 @@
+{
+  "domain": "free_sleep",
+  "name": "Free Sleep",
+  "codeowners": ["@free-sleep"],
+  "config_flow": true,
+  "documentation": "https://github.com/throwaway31265",
+  "issue_tracker": "https://github.com/throwaway31265/issues",
+  "iot_class": "local_polling",
+  "requirements": ["aiohttp>=3.8.0"],
+  "version": "1.0.0"
+}
+
