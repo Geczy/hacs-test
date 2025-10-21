@@ -64,7 +64,7 @@ A first-class Home Assistant custom component for controlling your jailbroken Fr
 2. Click on "Integrations"
 3. Click the three dots in the top right corner
 4. Select "Custom repositories"
-5. Add this repository URL: `https://github.com/throwaway31265`
+5. Add this repository URL: `https://github.com/Geczy/hacs-test`
 6. Select category "Integration"
 7. Click "Add"
 8. Find "Free Sleep" in the integration list
